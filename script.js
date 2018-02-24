@@ -52,3 +52,39 @@ document.querySelector('#signButton').addEventListener('click', function() {
   window.alert('A comment is required');
 }
 });
+document.querySelector('#signButton').addEventListener('click', function() {
+  var signButton = document.querySelector('#signButton');
+  signButton.addEventListener('click', onClickSign);
+  function onClickSign() {
+  var nameInput = document.querySelector('#userName');
+  var emailInput = document.querySelector('#userEmail');
+  var commentInput = document.querySelector('#userComment');
+  var name = nameInput.value;
+  var email = emailInput.value;
+  var comment = commentInput.value;
+  var nameElement = document.createElement('p');
+  var emailElement = document.createElement('p');
+  var commentElement = document.createElement('p');
+  nameElement.textContent = name;
+  emailElement.textContent = email;
+  commentElement.textContent = comment;
+  nameElement.classList.add('name');
+  emailElement.classList.add('email');
+  commentElement.classList.add('comment');
+  var signature = document.createElement('p');
+  signature.classList.add('signature');
+  signature.appendChild(nameElement);
+  signature.appendChild(emailElement);
+  signature.appendChild(commentElement);
+  var signatures = document.querySelector('.signatures');
+  signatures.appendChild(signature);
+  nameInput.value = '';
+  emailInput.value = '';
+  commentInput.value = '';
+  var numSignaturesElement = document.querySelector('.numSignatures');
+  var numSignatures = parseInt(numSignaturesElement.textContent);
+  numSignatures = numSignatures + 1;
+  numSignaturesElement.textContent = numSignatures;
+  alert('Thank you for doing your part to save Net Neutrality, ' + name)
+    }
+});
