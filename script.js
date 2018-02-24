@@ -40,3 +40,15 @@ document.querySelector('.signButton').addEventListener('click', function() {
     window.alert('Your name is required');
   }
 });
+document.querySelector('.signButton').addEventListener('click', function() {
+  var email = document.querySelector('#userEmail').value;
+  if(email == ''){
+    window.alert('Your email is required');
+  }
+});
+document.querySelector('.signButton').addEventListener('click', function() {
+  var comment = document.querySelector('#userComment').value;
+  if (comment == ''){
+  window.alert('A comment is required');
+}
+});
