@@ -34,3 +34,9 @@ document.querySelector('button').addEventListener('click', function() {
   allParagraphs[0].textContent="Made last it seen went no just when of by. Occasional entreaties comparison me difficulty so themselves. At brother inquiry of offices without do my service. As particular to companions at sentiments. Weather however luckily enquire so certain do. Aware did stood was day under ask. Dearest affixed enquire on explain opinion he. Reached who the mrs joy offices pleased. Towards did colonel article any parties.";
   allParagraphs[1].textContent="Yourself off its pleasant ecstatic now law. Ye their mirth seems of songs. Prospect out bed contempt separate. Her inquietude our shy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave widow hours among him ﻿no you led. Power had these met least nor young. Yet match drift wrong his our.";
 });
+document.querySelector('.signButton').addEventListener('click', function() {
+  var name = document.querySelector('#userName').value;
+  if (name == ''){
+    window.alert('Your name is required');
+  }
+});
