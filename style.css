@@ -32,3 +32,23 @@ div {
 body {
   background-color:#54626F;
 }
+.signPetition{
+  text-align: center;
+}
+#userName{
+  width: 500px;
+  height: 30px;
+
+
+}
+#userEmail{
+  width: 500px;
+  height: 30px;
+
+
+}
+#userComment{
+  width: 500px;
+  height: 100px;
+
+}
